@@ -1,7 +1,7 @@
 package GuilhermeBuglioli555273.globalSolution.dto;
 
-import GuilhermeBuglioli555273.globalSolution.Modal.Frete;
-import GuilhermeBuglioli555273.globalSolution.Modal.Item;
+import GuilhermeBuglioli555273.globalSolution.entities.Frete;
+import GuilhermeBuglioli555273.globalSolution.entities.Item;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package GuilhermeBuglioli555273.globalSolution.controller;
 
-import GuilhermeBuglioli555273.globalSolution.Service.FreteService;
+import GuilhermeBuglioli555273.globalSolution.services.FreteService;
 import GuilhermeBuglioli555273.globalSolution.dto.FreteDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class FreteController {
     }
 
     @PostMapping
-    public ResponseEntity<FreteDto> saveRestaurante(@Valid @RequestBody FreteDto dto) {
+    public ResponseEntity<FreteDto> saveFrete(@Valid @RequestBody FreteDto dto) {
         dto = freteService.saveFrete(dto);
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequestUri()
@@ -47,14 +47,14 @@ public class FreteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<FreteDto> updateRestaurante(@PathVariable Long id, @Valid @RequestBody FreteDto dto) {
+    public ResponseEntity<FreteDto> updateFrete(@PathVariable Long id, @Valid @RequestBody FreteDto dto) {
 
         dto = freteService.updateFrete(id, dto);
         return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRestaurante(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteFrete(@PathVariable Long id) {
         freteService.deleteFreteById(id);
         return ResponseEntity.noContent().build();
     }

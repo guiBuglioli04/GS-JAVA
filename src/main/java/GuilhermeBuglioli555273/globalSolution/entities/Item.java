@@ -1,4 +1,4 @@
-package GuilhermeBuglioli555273.globalSolution.Modal;
+package GuilhermeBuglioli555273.globalSolution.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
