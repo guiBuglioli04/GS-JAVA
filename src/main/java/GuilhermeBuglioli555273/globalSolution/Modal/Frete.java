@@ -23,6 +23,6 @@ public class Frete {
     private Double valor;
     private String naveFrete;
     private Double tempoViagem;
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "frete")
     private List<Item> itens;
 }
