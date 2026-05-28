@@ -35,5 +35,6 @@ public class FreteDto {
         dataEnvio = frete.getDataEnvio();
         valor = frete.getValor();
         naveFrete = frete.getNaveFrete();
+        tempoViagem = frete.getTempoViagem();
     }
 }
