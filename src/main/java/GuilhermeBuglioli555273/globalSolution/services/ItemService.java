@@ -4,7 +4,7 @@ import GuilhermeBuglioli555273.globalSolution.entities.Frete;
 import GuilhermeBuglioli555273.globalSolution.entities.Item;
 import GuilhermeBuglioli555273.globalSolution.repositories.FreteRepository;
 import GuilhermeBuglioli555273.globalSolution.repositories.ItemRepository;
-import GuilhermeBuglioli555273.globalSolution.dto.ItemDto;
+import GuilhermeBuglioli555273.globalSolution.dtos.ItemDto;
 import GuilhermeBuglioli555273.globalSolution.exceptions.DatabaseException;
 import GuilhermeBuglioli555273.globalSolution.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
@@ -36,12 +36,12 @@ public class ItemService {
     @Transactional(readOnly = true)
     public ItemDto findItemById(Long id) {
 
-        Item restaurante = repository.findById(id).orElseThrow(
+        Item item = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Recurso não encontrado. ID: " + id)
 
         );
 
-        return new ItemDto(restaurante);
+        return new ItemDto(item);
     }
 
     @Transactional

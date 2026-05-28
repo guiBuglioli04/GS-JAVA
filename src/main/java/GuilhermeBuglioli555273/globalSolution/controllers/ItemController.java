@@ -1,7 +1,7 @@
-package GuilhermeBuglioli555273.globalSolution.controller;
+package GuilhermeBuglioli555273.globalSolution.controllers;
 
-import GuilhermeBuglioli555273.globalSolution.services.FreteService;
-import GuilhermeBuglioli555273.globalSolution.dto.FreteDto;
+import GuilhermeBuglioli555273.globalSolution.services.ItemService;
+import GuilhermeBuglioli555273.globalSolution.dtos.ItemDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,32 +12,32 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/fretes")
-public class FreteController {
+@RequestMapping("/Items")
+public class ItemController {
 
     @Autowired
-    private FreteService freteService;
+    private ItemService ItemService;
 
     @GetMapping
-    public ResponseEntity<List<FreteDto>> getAll() {
+    public ResponseEntity<List<ItemDto>> getAll() {
 
-        List<FreteDto> dto = freteService.findAllFretes();
+        List<ItemDto> dto = ItemService.findAllItems();
 
         return ResponseEntity.ok(dto);
 
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FreteDto> getOne(@PathVariable Long id) {
+    public ResponseEntity<ItemDto> getOne(@PathVariable Long id) {
 
-        FreteDto dto = freteService.findFreteById(id);
+        ItemDto dto = ItemService.findItemById(id);
 
         return ResponseEntity.ok(dto);
     }
 
     @PostMapping
-    public ResponseEntity<FreteDto> saveFrete(@Valid @RequestBody FreteDto dto) {
-        dto = freteService.saveFrete(dto);
+    public ResponseEntity<ItemDto> saveItem(@Valid @RequestBody ItemDto dto) {
+        dto = ItemService.saveItem(dto);
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequestUri()
                 .path("/{id}")
@@ -47,16 +47,15 @@ public class FreteController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<FreteDto> updateFrete(@PathVariable Long id, @Valid @RequestBody FreteDto dto) {
+    public ResponseEntity<ItemDto> updateItem(@PathVariable Long id, @Valid @RequestBody ItemDto dto) {
 
-        dto = freteService.updateFrete(id, dto);
+        dto = ItemService.updateItem(id, dto);
         return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFrete(@PathVariable Long id) {
-        freteService.deleteFreteById(id);
+    public ResponseEntity<Void> deleteItem(@PathVariable Long id) {
+        ItemService.deleteItemById(id);
         return ResponseEntity.noContent().build();
     }
-
 }

@@ -2,7 +2,7 @@ package GuilhermeBuglioli555273.globalSolution.services;
 
 import GuilhermeBuglioli555273.globalSolution.entities.Frete;
 import GuilhermeBuglioli555273.globalSolution.repositories.FreteRepository;
-import GuilhermeBuglioli555273.globalSolution.dto.FreteDto;
+import GuilhermeBuglioli555273.globalSolution.dtos.FreteDto;
 import GuilhermeBuglioli555273.globalSolution.exceptions.DatabaseException;
 import GuilhermeBuglioli555273.globalSolution.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
@@ -30,12 +30,12 @@ public class FreteService {
     @Transactional(readOnly = true)
     public FreteDto findFreteById(Long id) {
 
-        Frete restaurante = repository.findById(id).orElseThrow(
+        Frete frete = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Recurso não encontrado. ID: " + id)
 
         );
 
-        return new FreteDto(restaurante);
+        return new FreteDto(frete);
     }
 
     @Transactional

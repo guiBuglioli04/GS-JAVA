@@ -1,6 +1,5 @@
-package GuilhermeBuglioli555273.globalSolution.dto;
+package GuilhermeBuglioli555273.globalSolution.dtos;
 
-import GuilhermeBuglioli555273.globalSolution.entities.Frete;
 import GuilhermeBuglioli555273.globalSolution.entities.Item;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
