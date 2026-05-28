@@ -16,7 +16,8 @@ import java.util.List;
 @Entity
 @Table(name = "tb_frete")
 public class Frete {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDate dataEnvio;

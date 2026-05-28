@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Items")
+@RequestMapping("/itens")
 public class ItemController {
 
     @Autowired
