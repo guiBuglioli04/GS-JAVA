@@ -1,7 +1,7 @@
-package GuilhermeBuglioli555273.globalSolution.controller;
+package GuilhermeBuglioli555273.globalSolution.controllers;
 
-import GuilhermeBuglioli555273.globalSolution.Service.ItemService;
-import GuilhermeBuglioli555273.globalSolution.dto.ItemDto;
+import GuilhermeBuglioli555273.globalSolution.services.ItemService;
+import GuilhermeBuglioli555273.globalSolution.dtos.ItemDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

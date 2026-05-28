@@ -1,11 +1,10 @@
-package GuilhermeBuglioli555273.globalSolution.dto;
+package GuilhermeBuglioli555273.globalSolution.dtos;
 
-import GuilhermeBuglioli555273.globalSolution.Modal.Frete;
+import GuilhermeBuglioli555273.globalSolution.entities.Frete;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDate;
 

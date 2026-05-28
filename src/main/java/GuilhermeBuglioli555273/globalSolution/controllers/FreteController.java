@@ -1,7 +1,7 @@
-package GuilhermeBuglioli555273.globalSolution.controller;
+package GuilhermeBuglioli555273.globalSolution.controllers;
 
-import GuilhermeBuglioli555273.globalSolution.Service.FreteService;
-import GuilhermeBuglioli555273.globalSolution.dto.FreteDto;
+import GuilhermeBuglioli555273.globalSolution.services.FreteService;
+import GuilhermeBuglioli555273.globalSolution.dtos.FreteDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

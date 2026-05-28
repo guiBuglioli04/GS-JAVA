@@ -1,10 +1,9 @@
-package GuilhermeBuglioli555273.globalSolution.Modal;
+package GuilhermeBuglioli555273.globalSolution.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor

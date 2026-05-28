@@ -1,11 +1,10 @@
-package GuilhermeBuglioli555273.globalSolution.Service;
+package GuilhermeBuglioli555273.globalSolution.services;
 
-import GuilhermeBuglioli555273.globalSolution.Modal.Frete;
-import GuilhermeBuglioli555273.globalSolution.Modal.Item;
-import GuilhermeBuglioli555273.globalSolution.Repository.FreteRepository;
-import GuilhermeBuglioli555273.globalSolution.Repository.ItemRepository;
-import GuilhermeBuglioli555273.globalSolution.Repository.ItemRepository;
-import GuilhermeBuglioli555273.globalSolution.dto.ItemDto;
+import GuilhermeBuglioli555273.globalSolution.entities.Frete;
+import GuilhermeBuglioli555273.globalSolution.entities.Item;
+import GuilhermeBuglioli555273.globalSolution.repositories.FreteRepository;
+import GuilhermeBuglioli555273.globalSolution.repositories.ItemRepository;
+import GuilhermeBuglioli555273.globalSolution.dtos.ItemDto;
 import GuilhermeBuglioli555273.globalSolution.exceptions.DatabaseException;
 import GuilhermeBuglioli555273.globalSolution.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
