@@ -54,7 +54,7 @@ public class FreteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteFrete(@PathVariable Long id) {
+public ResponseEntity<Void> deleteFrete(@PathVariable Long id) {
         freteService.deleteFreteById(id);
         return ResponseEntity.noContent().build();
     }
