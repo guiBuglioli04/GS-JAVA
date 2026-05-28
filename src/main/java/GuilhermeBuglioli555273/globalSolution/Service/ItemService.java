@@ -37,12 +37,12 @@ public class ItemService {
     @Transactional(readOnly = true)
     public ItemDto findItemById(Long id) {
 
-        Item restaurante = repository.findById(id).orElseThrow(
+        Item item = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Recurso não encontrado. ID: " + id)
 
         );
 
-        return new ItemDto(restaurante);
+        return new ItemDto(item);
     }
 
     @Transactional

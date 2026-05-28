@@ -30,12 +30,12 @@ public class FreteService {
     @Transactional(readOnly = true)
     public FreteDto findFreteById(Long id) {
 
-        Frete restaurante = repository.findById(id).orElseThrow(
+        Frete frete = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Recurso não encontrado. ID: " + id)
 
         );
 
-        return new FreteDto(restaurante);
+        return new FreteDto(frete);
     }
 
     @Transactional

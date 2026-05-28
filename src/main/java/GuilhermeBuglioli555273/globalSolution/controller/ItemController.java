@@ -36,7 +36,7 @@ public class ItemController {
     }
 
     @PostMapping
-    public ResponseEntity<ItemDto> saveRestaurante(@Valid @RequestBody ItemDto dto) {
+    public ResponseEntity<ItemDto> saveItem(@Valid @RequestBody ItemDto dto) {
         dto = ItemService.saveItem(dto);
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequestUri()
@@ -47,14 +47,14 @@ public class ItemController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ItemDto> updateRestaurante(@PathVariable Long id, @Valid @RequestBody ItemDto dto) {
+    public ResponseEntity<ItemDto> updateItem(@PathVariable Long id, @Valid @RequestBody ItemDto dto) {
 
         dto = ItemService.updateItem(id, dto);
         return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRestaurante(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteItem(@PathVariable Long id) {
         ItemService.deleteItemById(id);
         return ResponseEntity.noContent().build();
     }
